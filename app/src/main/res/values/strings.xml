@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">Polly Challenge</string>
+    <string name="lbl_btn_login">LOGIN WITH TWITTER</string>
+    <string name="com.twitter.sdk.android.CONSUMER_KEY">ULg01s9VizKx9RQh1SGDTzyeV</string>
+    <string name="com.twitter.sdk.android.CONSUMER_SECRET">vurN7f3Q1CaoJHmlNsdAp0M5qNlDh39aiHqrBxAgNK4qElgYhF</string>
+    <string name="lbl_desc">Twitter Timeline Client</string>
+    <string name="lbl_title">Raul Barcenas - Polly Challenge</string>
+</resources>

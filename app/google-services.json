@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "333351779172",
+    "firebase_url": "https://challenges-c0ae5.firebaseio.com",
+    "project_id": "challenges-c0ae5",
+    "storage_bucket": "challenges-c0ae5.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:333351779172:android:18387b9054331139",
+        "android_client_info": {
+          "package_name": "com.example.pollychallenge"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "333351779172-o7i4sspddtv9qs4vdljsu323qvpbte97.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.pollychallenge",
+            "certificate_hash": "fe1ded75c5ffa91222b2dbd2090a379d84205979"
+          }
+        },
+        {
+          "client_id": "333351779172-li2vjn4jqpn911dl69s0p8fgqpbvrp2c.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBr6ULUyPdzt_3Oxl14YeGouhhFdAbygVU"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "333351779172-li2vjn4jqpn911dl69s0p8fgqpbvrp2c.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
