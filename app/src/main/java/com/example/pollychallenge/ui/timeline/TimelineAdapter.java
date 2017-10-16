@@ -4,16 +4,15 @@ import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.example.pollychallenge.R;
+import com.example.pollychallenge.util.CircleTransform;
+import com.squareup.picasso.Picasso;
 import com.twitter.sdk.android.core.models.Tweet;
 
 import java.util.List;
-
-/**
- * Created by admin on 10/16/17.
- */
 
 public class TimelineAdapter extends RecyclerView.Adapter<TimelineAdapter.ViewHolder> {
 
@@ -32,12 +31,17 @@ public class TimelineAdapter extends RecyclerView.Adapter<TimelineAdapter.ViewHo
     @Override
     public void onBindViewHolder(ViewHolder holder, int position) {
         Tweet tweet = tweets.get(position);
+        Picasso.with(holder.avatar.getContext())
+                .load(tweet.user.profileImageUrl)
+                .transform(new CircleTransform())
+                .into(holder.avatar);
         holder.name.setText(tweet.user.name);
         holder.username.setText("@"+tweet.user.screenName);
-        holder.time.setText(tweet.createdAt);
         holder.text.setText(tweet.text);
         holder.retweet.setText(String.valueOf(tweet.retweetCount));
+        holder.retweet.setCompoundDrawablesWithIntrinsicBounds(R.drawable.ic_retweet, 0, 0, 0);
         holder.likes.setText(String.valueOf(tweet.favoriteCount));
+        holder.likes.setCompoundDrawablesWithIntrinsicBounds(R.drawable.ic_like, 0, 0, 0);
     }
 
     @Override
@@ -52,19 +56,18 @@ public class TimelineAdapter extends RecyclerView.Adapter<TimelineAdapter.ViewHo
     }
 
     class ViewHolder extends RecyclerView.ViewHolder {
-
+        ImageView avatar;
         TextView name;
         TextView username;
-        TextView time;
         TextView text;
         TextView retweet;
         TextView likes;
 
         public ViewHolder(View itemView) {
             super(itemView);
+            avatar = itemView.findViewById(R.id.iv_avatar);
             name = itemView.findViewById(R.id.tv_name);
             username = itemView.findViewById(R.id.tv_username);
-            time = itemView.findViewById(R.id.tv_time);
             text = itemView.findViewById(R.id.tv_tweet);
             retweet = itemView.findViewById(R.id.tv_retweet);
             likes = itemView.findViewById(R.id.tv_likes);
